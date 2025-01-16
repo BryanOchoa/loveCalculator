@@ -20,6 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const compatibility = Math.floor(Math.random() * 100) + 1; 
     
         // Display the result 
-        alert(`The compatibility between ${name1} and ${name2} is ${compatibility}%!`);
+        if (compatibility === 100) {
+            alert(`The compatibility between ${name1} and ${name2} is 100%! You are a perfect match!`);
+        } else if (compatibility > 80) {  
+            alert(`The compatibility between ${name1} and ${name2} is ${compatibility}%. You are very compatible!`);
+        } else if (compatibility > 50) {    
+            alert(`The compatibility between ${name1} and ${name2} is ${compatibility}%. You are somewhat compatible!`);
+        } else if (compatibility > 30) {    
+            alert(`The compatibility between ${name1} and ${name2} is ${compatibility}%. RUN away! Do not walk!!!!`);
+        }
+        // alert(`The compatibility between ${name1} and ${name2} is ${compatibility}%!`);
     }
 });
